@@ -1,6 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
 import ShopItemFunc from './components/ShopItemFunc/ShopItemFunc'
+import './components/ShopItemFunc/shopItemFunc.css';
 
 function App() {
   const item = {
@@ -12,10 +11,17 @@ function App() {
     currency: '£'
   }
   return (
-    <>
-    <ShopItemFunc info={item}/>
-    </>
-  );
+    <div className="container">
+      <div className="background-element">
+      </div>
+      <div className="highlight-window">
+        <div className='highlight-overlay'></div>
+      </div>
+      <div className="window">
+        <ShopItemFunc info={item} />
+      </div>
+    </div>
+  )
 }
 
 export default App;
